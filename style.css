@@ -23,7 +23,7 @@ body {
   display: flex;
   /* align-items: center; */
   justify-content: center;
-  background-color: var(--nord0);
+  background-color: var(--nord1);
 }
 .calculator {
   /* height: 100%; */
@@ -36,6 +36,7 @@ body {
   box-shadow: 5px 10px var(--nord7);
   padding: 20px;
   border-radius: 30px;
+  background-color: var(--nord0);
 }
 #output {
   text-align: right;
