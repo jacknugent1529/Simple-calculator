@@ -22,12 +22,14 @@ function trimZeros(s) {
   }
   return s;
 }
-function updateDisplay(s) {
+function updateDisplay(s, trim = false) {
   if (s.length > 10 || isNaN(s.length)) {
     s = s.substr(0, 10);
     // print(s);
   }
-  s = trimZeros(s);
+  if (trim) {
+    s = trimZeros(s);
+  }
   document.querySelector("#output").textContent = s;
 }
 function operate(operator) {
@@ -36,26 +38,26 @@ function operate(operator) {
     case "add":
       result += parseFloat(current);
       current = "0";
-      updateDisplay(result.toFixed(10));
+      updateDisplay(result.toFixed(10), true);
       break;
     case "subtract":
       result -= parseFloat(current);
       current = "0";
-      updateDisplay(result.toFixed(10));
+      updateDisplay(result.toFixed(10), true);
       break;
     case "multiply":
       result *= parseFloat(current);
       current = "0";
-      updateDisplay(result.toFixed(10));
+      updateDisplay(result.toFixed(10), true);
       break;
     case "divide":
       result /= parseFloat(current);
       current = "0";
-      updateDisplay(result.toFixed(10));
+      updateDisplay(result.toFixed(10), true);
       break;
     case "equals":
       current = "0";
-      updateDisplay(result.toFixed(10));
+      updateDisplay(result.toFixed(10), true);
       break;
   }
   buffer.shift();

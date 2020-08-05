@@ -66,6 +66,10 @@ body {
   transform: translate(2px,4px);
   box-shadow: 2px 4px;
 }
+.calcBtn.clicked{
+  transform: translate(2px,4px);
+  box-shadow: 2px 4px;
+}
 .operator {
   color: var(--nord14);
 }
